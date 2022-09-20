@@ -2,7 +2,6 @@ apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: {{ include "aws-multi-ecr-credentials.cronJob" . }}
-  namespace: {{ include "aws-multi-ecr-credentials.namespace" . }}
   labels:
 {{ include "aws-multi-ecr-credentials.labels" . | indent 4 }}
 spec:
