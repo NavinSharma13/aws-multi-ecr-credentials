@@ -21,8 +21,3 @@ Define resource names
 {{- define "aws-multi-ecr-credentials.secret" }}
 {{- default (printf "%s-secret" .Release.Name) -}}
 {{- end }}
-
-{{- define "aws-multi-ecr-credentials.ClusterRoleBinding" }}
-{{- default (printf "%s-%s-clusterRoleBinding" .Release.Name .Values.targetNamespace) -}}
-{{- end }}
-
